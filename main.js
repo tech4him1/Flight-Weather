@@ -17,16 +17,13 @@ $.get({
   crossDomain: true,
 })
 .done(function( xml ) {
-  var airmets = $( xml ).find( "GAIRMET" );
-  for(let i=0; i < airmets.length; i++) {
-    let points = $( airmets[i] ).find( "area point" );
+  $( xml ).find( "GAIRMET" ).each(function(){
     let shape = [];
-    for(let j=0; j < points.length; j++) {
-        let longitude = $(points[j]).children("longitude")[0].innerHTML;
-        let latitude = $(points[j]).children("latitude")[0].innerHTML;
+    $( this ).find( "area point" ).each(function(){
+        let longitude = $(this).children("longitude")[0].innerHTML;
+        let latitude = $(this).children("latitude")[0].innerHTML;
         shape.push([Number(latitude), Number(longitude)]);
-    }
+    });
     L.polygon(shape).addTo(mymap);
-    console.log(JSON.stringify(shape));
-  }
+  });
 });
