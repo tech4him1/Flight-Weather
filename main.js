@@ -13,11 +13,12 @@ $.get({
       format: "xml",
       flightPath: "KSGU;KDEN;KSHR",
   },
-  dataType : "xml",
+  dataType : "jsonp",
   crossDomain: true,
 })
 .done(function( xml ) {
-  var airmets = $( xml ).find( "GAIRMET" );
+  $xml = $.parseXml(xml);
+  var airmets = $xml.find( "GAIRMET" );
   for(let i=0; i < airmets.length; i++) {
     let area = airmets[i].find( "area" );
     console.log(area);
