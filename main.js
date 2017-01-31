@@ -27,5 +27,6 @@ $.get({
         shape.push([Number(latitude), Number(longitude)]);
     }
     L.polygon(shape).addTo(mymap);
+    console.log(JSON.stringify(shape));
   }
 });
