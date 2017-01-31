@@ -6,14 +6,14 @@ L.tileLayer('https://[a|b|c].tile.openstreetmap.org/${z}/${x}/${y}.png', {
 }).addTo(mymap);
 
 $.get({
-  url: "//www.aviationweather.gov/adds/dataserver_current/httpparam",
+  url: "https://adds-forwarder.herokuapp.com/",
   data: {
       dataSource: "gairmets",
       requestType: "retrieve",
       format: "xml",
       flightPath: "KSGU;KDEN;KSHR",
   },
-  dataType : "jsonp",
+  dataType : "xml",
   crossDomain: true,
 })
 .done(function( xml ) {
