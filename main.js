@@ -11,7 +11,7 @@ $.get({
       requestType: "retrieve",
       format: "xml",
       flightPath: "0;KSGU;KDEN;KSHR",
-      hoursBeforeNow: 1,
+      hoursBeforeNow: 2,
   },
   dataType : "xml",
   crossDomain: true,
