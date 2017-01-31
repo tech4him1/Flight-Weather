@@ -1,19 +1,14 @@
 ---
 layout: default
 ---
-  <head>
-    <link rel="stylesheet" href="https://openlayers.org/en/v3.20.1/css/ol.css" type="text/css">
-    <style>
-      .map {
-        height: 400px;
-        width: 100%;
-      }
-    </style>
-    <script src="https://openlayers.org/en/v3.20.1/build/ol.js" type="text/javascript"></script>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <title>Flight Weather</title>
-  </head>
-  <body>
-    <div id="map" class="map"></div>
-    <script src="main.js"></script>
-  </body>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+<style>
+  #mapid {
+    height: 400px;
+  }
+</style>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+
+<div id="mapid"></div>
+<script src="main.js"></script>
