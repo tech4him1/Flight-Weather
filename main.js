@@ -6,7 +6,7 @@ L.tileLayer('https://[a|b|c].tile.openstreetmap.org/${z}/${x}/${y}.png', {
 }).addTo(mymap);
 
 $.get({
-    url: "http://www.aviationweather.gov/adds/dataserver_current/httpparam",
+    url: "//www.aviationweather.gov/adds/dataserver_current/httpparam",
     data: {
         dataSource: "gairmets",
         requestType: "retrieve",
