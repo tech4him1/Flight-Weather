@@ -37,7 +37,7 @@ $.get({
         let latitude = $(this).children("latitude")[0].innerHTML;
         shape.push([Number(latitude), Number(longitude)]);
     });
-    let type = $( this ).children( "hazard" ).attr( "type" )[0].innerHTML;
+    let type = $( this ).children( "hazard" ).attr( "type" );
     L.polygon(shape, styles[type]).addTo(mymap);
   });
 });
