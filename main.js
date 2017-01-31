@@ -24,7 +24,7 @@ $.get({
     for(let j=0; j < points.length; j++) {
         let longtitude = $(points[j]).children("longtitude")[0];
         let latitude = $(points[j]).children("latitude")[0];
-        shape.push([latitude, longtitude];
+        shape.push([latitude, longtitude]);
     }
     L.polygon(shape).addTo(mymap);
   }
