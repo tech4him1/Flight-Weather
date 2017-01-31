@@ -17,8 +17,7 @@ $.get({
   crossDomain: true,
 })
 .done(function( xml ) {
-  $xml = $.parseXml(xml);
-  var airmets = $xml.find( "GAIRMET" );
+  var airmets = $( xml ).find( "GAIRMET" );
   for(let i=0; i < airmets.length; i++) {
     let area = airmets[i].find( "area" );
     console.log(area);
