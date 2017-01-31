@@ -1,11 +1,11 @@
 const styles = {
-  "TurbulenceHi": { color: "darkorange" },
-  "TurbulenceLo": { color: "darkred" },
+  "TURB-HI": { color: "darkorange" },
+  "TURB-LO": { color: "darkred" },
   "LLWS": { color: "darkpurple" },
-  "Icing": { color: "darkblue" },
-  "Frz": { color: "blue" },
+  "ICE": { color: "darkblue" },
+  "FZLVL": { color: "blue" },
   "IFR": { color: "darkpurple" },
-  "MtnOb": { color: "darkpink" },
+  "MT_OBSC": { color: "darkpink" },
 }
 
 
