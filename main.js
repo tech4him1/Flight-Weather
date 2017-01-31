@@ -1,19 +1,12 @@
-// Using the core $.ajax() method
-$.ajax({
-
-    // The URL for the request
-    url: "post.php",
-
-    // The data to send (will be converted to a query string)
+$.get({
+    url: "http://www.aviationweather.gov/adds/dataserver_current/httpparam",
     data: {
-        id: 123
+        dataSource: "gairmets",
+        requestType: "retrieve",
+        format: "xml",
+        flightPath: "KSGU;KDEN;KSHR",
     },
-
-    // Whether this is a POST or GET request
-    type: "GET",
-
-    // The type of data we expect back
-    dataType : "json",
+    dataType : "xml",
 })
   // Code to run if the request succeeds (is done);
   // The response is passed to the function
