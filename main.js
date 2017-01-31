@@ -14,9 +14,7 @@ $.get({
       flightPath: "KSGU;KDEN;KSHR",
   },
   dataType : "xml",
-  xhrFields: {
-    withCredentials: true
-  },
+  crossDomain: true,
 })
 .done(function( xml ) {
   var airmets = $( xml ).find( "GAIRMET" );
