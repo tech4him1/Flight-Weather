@@ -19,14 +19,13 @@ $.get({
 .done(function( xml ) {
   var airmets = $( xml ).find( "GAIRMET" );
   for(let i=0; i < airmets.length; i++) {
-    let points = $( airmets[i] ).find( "area point" );
+    let points = $( airmets[i] ).children( "area point" );
+    let shape = [];
     for(let j=0; j < points.length; j++) {
-        console.log(points[j]);
+        let longtitude = $(points[j]).children("longtitude")[0];
+        let latitude = $(points[j]).children("latitude")[0];
+        shape.push([latitude, longtitude];
     }
+    L.polygon(shape).addTo(mymap);
   }
-   L.polygon([
-    [51.509, -0.08],
-    [51.503, -0.06],
-    [51.51, -0.047]
-  ]).addTo(mymap);
 });
