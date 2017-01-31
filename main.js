@@ -19,8 +19,10 @@ $.get({
 .done(function( xml ) {
   var airmets = $( xml ).find( "GAIRMET" );
   for(let i=0; i < airmets.length; i++) {
-    let area = $( airmets[i] ).find( "area" );
-    console.log(area);
+    let points = $( airmets[i] ).find( "area point" );
+    for(let j=0; j < points.length; j++) {
+        console.log(points[j].value);
+    }
   }
    L.polygon([
     [51.509, -0.08],
