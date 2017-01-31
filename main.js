@@ -6,7 +6,7 @@ L.tileLayer('https://[a|b|c].tile.openstreetmap.org/${z}/${x}/${y}.png', {
 }).addTo(mymap);
 
 $.get({
-  url: "https://adds-forwarder.herokuapp.com/",
+  url: "https://adds-forwarder.herokuapp.com/dataserver_current/httpparam",
   data: {
       dataSource: "gairmets",
       requestType: "retrieve",
