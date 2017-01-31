@@ -1,3 +1,15 @@
+const styles = {
+  "TurbulenceHi": { color: "darkorange" },
+  "TurbulenceLo": { color: "darkred" },
+  "LLWS": { color: "darkpurple" },
+  "Icing": { color: "darkblue" },
+  "Frz": { color: "blue" },
+  "IFR": { color: "darkpurple" },
+  "MtnOb": { color: "darkpink" },
+}
+
+
+
 var mymap = L.map('mapid').setView([39.8282, -98.5795], 4);
 
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
@@ -10,9 +22,8 @@ $.get({
       dataSource: "gairmets",
       requestType: "retrieve",
       format: "xml",
-      //flightPath: "0;KDEN;KSHR",
+      flightPath: "0;KDEN;KSHR",
       hoursBeforeNow: 2,
-      mostRecent: true,
   },
   dataType : "xml",
   crossDomain: true,
@@ -26,6 +37,7 @@ $.get({
         let latitude = $(this).children("latitude")[0].innerHTML;
         shape.push([Number(latitude), Number(longitude)]);
     });
-    L.polygon(shape).addTo(mymap);
+    let type = $( this ).children( "hazard" ).attr( "type" )[0].innerHTML;
+    L.polygon(shape, styles[type]).addTo(mymap);
   });
 });
