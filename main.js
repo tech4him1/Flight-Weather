@@ -22,8 +22,8 @@ $.get({
     let points = $( airmets[i] ).find( "area point" );
     let shape = [];
     for(let j=0; j < points.length; j++) {
-        let longtitude = $(points[j]).children("longtitude").contents()[0];
-        let latitude = $(points[j]).children("latitude").contents()[0];
+        let longtitude = $(points[j]).children("longtitude")[0].innerHTML;
+        let latitude = $(points[j]).children("latitude")[0].innerHTML;
         shape.push([Number(latitude), Number(longtitude)]);
     }
     L.polygon(shape).addTo(mymap);
