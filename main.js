@@ -10,13 +10,14 @@ $.get({
       dataSource: "gairmets",
       requestType: "retrieve",
       format: "xml",
-      flightPath: "0;KSGU;KDEN;KSHR",
+      flightPath: "0;KDEN;KSHR",
       hoursBeforeNow: 2,
   },
   dataType : "xml",
   crossDomain: true,
 })
 .done(function( xml ) {
+  console.log(xml);
   $( xml ).find( "GAIRMET" ).each(function(){
     let shape = [];
     $( this ).find( "area point" ).each(function(){
