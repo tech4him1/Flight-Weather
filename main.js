@@ -1,6 +1,6 @@
 var mymap = L.map('mapid').setView([10, 10], 5);
 
-L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(mymap);
 
@@ -21,7 +21,7 @@ $.get({
   for(let i=0; i < airmets.length; i++) {
     let points = $( airmets[i] ).find( "area point" );
     for(let j=0; j < points.length; j++) {
-        console.log(points[j].innerText);
+        console.log(points[j]);
     }
   }
    L.polygon([
