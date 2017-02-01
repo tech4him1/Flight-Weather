@@ -46,9 +46,6 @@ export default function(callback) {
         // Get the hazard type.
         let type = $( this ).children( "hazard" ).attr( "type" );
 
-        // Remove unwanted types.
-        if ( disabledTypes.includes(type) ) return;
-
         // Make an outline of the polygon from the points.
         let outline = [];
         $( this ).find( "area point" ).each(function(){

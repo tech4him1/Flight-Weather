@@ -72,9 +72,9 @@ var Maps =
 /***/ (function(module, exports) {
 
 module.exports = {
-	"path": "KSGU;KDEN",
-	"time": "2017-02-01T20:30:00Z",
-	"variance": 10
+	"path": "KSGU;KDEN;KSHR",
+	"time": "2017-02-02T14:25:00Z",
+	"variance": 100
 };
 
 /***/ }),
@@ -258,9 +258,6 @@ var layers = {};
 
         // Get the hazard type.
         let type = $( this ).children( "hazard" ).attr( "type" );
-
-        // Remove unwanted types.
-        if ( disabledTypes.includes(type) ) return;
 
         // Make an outline of the polygon from the points.
         let outline = [];
