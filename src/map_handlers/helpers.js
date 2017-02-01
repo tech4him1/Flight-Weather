@@ -1,3 +1,6 @@
+//import L from 'leaflet';
+//import $ from 'jQuery';
+
 export function removeBeginEndDuplicates(polygon) {
   return polygon;//FILLER
 }
