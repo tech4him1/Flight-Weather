@@ -29,7 +29,9 @@ build:
         name: build
         code: |
             npm run build
-    # Publish Website
+publish:
+  # Publish Website
+  steps:
     - leipert/git-push:
          gh_oauth: $GH_TOKEN
          gh_pages: true
