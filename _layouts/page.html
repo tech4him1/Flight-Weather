@@ -10,6 +10,7 @@
 
     <style>
       nav ul {
+        display: inline-block;
         list-style: none;
       }
       nav ul li {
@@ -29,7 +30,7 @@
       <h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2>
       <nav>
         <ul>
-          {% for p in site.pages %}
+          {% for p in site.html_pages %}
           <li>
             <a href="{{ p.url }}" class="btn{% if p.url == page.url %} active{% endif %}">
               {{ p.title }}
