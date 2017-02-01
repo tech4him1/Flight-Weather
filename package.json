@@ -1,0 +1,26 @@
+{
+  "name": "flight-weather",
+  "description": "",
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "leaflet": "^1.0.3"
+  },
+  "devDependencies": {
+    "rimraf": "^2.5.4",
+    "webpack": "^2.2.1"
+  },
+  "scripts": {
+    "prebuild": "rimraf assets",
+    "build": "webpack src/maps.js assets/js/maps.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tech4him1/Flight-Weather.git"
+  },
+  "author": "tech4him1",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/tech4him1/Flight-Weather/issues"
+  },
+  "homepage": "https://tech4him1.github.io/Flight-Weather/"
+}
