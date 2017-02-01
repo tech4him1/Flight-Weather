@@ -1,0 +1,15 @@
+---
+layout: page
+title: Experimental
+---
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+<style>
+  #mainMap {
+    height: 400px;
+  }
+</style>
+
+<div id="sigmetMap" style="height: 750px;"></div>
+<script>Maps.createMap("sigmets", "sigmetMap");</script>
+<div id="airmetMap" style="height: 750px;"></div>
+<script>Maps.createMap("airmets", "airmetMap");</script>
