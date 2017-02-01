@@ -34,6 +34,11 @@
       <h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2>
       <nav>
         <ul>
+          <li>
+            <a href="https://www.aviationweather.gov/" target="_blank" class="btn">
+              Real-Time Weather
+            </a>
+          </li>
           {% for p in site.html_pages %}
           <li>
             <a href="{{ p.url | relative_url }}" class="btn{% if p.url == page.url %} active{% endif %}">
