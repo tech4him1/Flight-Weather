@@ -35,7 +35,7 @@
         <ul>
           {% for p in site.html_pages %}
           <li>
-            <a href="{{ p.url }}" class="btn{% if p.url == page.url %} active{% endif %}">
+            <a href="{{ p.url | relative_url }}" class="btn{% if p.url == page.url %} active{% endif %}">
               {{ p.title }}
             </a>
           </li>
